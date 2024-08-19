@@ -1,0 +1,5 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_LOCAL_MACHINE\Tmp_SYSTEM\ControlSet001\Services\exfat]
+"Start"=dword:00000000
+"BootFlags"=dword:00000080
