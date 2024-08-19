@@ -1,0 +1,143 @@
+HKLM\Software\Classes\*
+HKLM\Software\Classes\.desklink
+HKLM\Software\Classes\.msc
+HKLM\Software\Classes\.symlink
+HKLM\Software\Classes\AppID
+HKLM\Software\Classes\Applications\notepad.exe\shell\edit\command
+HKLM\Software\Classes\Applications\notepad.exe\shell\open\command
+HKLM\Software\Classes\CLSID
+HKLM\Software\Classes\Directory\shellex\PropertySheetHandlers\{1f2e5c40-9550-11ce-99d2-00aa006e086c}
+HKLM\Software\Classes\Drive\shell\unlock-bde
+HKLM\Software\Classes\Folder
+HKLM\Software\Classes\Interface
+HKLM\Software\Classes\Launcher.AllAppsDesktopApplication
+HKLM\Software\Classes\Launcher.Computer
+HKLM\Software\Classes\Launcher.DesktopPackagedApplication
+HKLM\Software\Classes\Launcher.ImmersiveApplication
+HKLM\Software\Classes\Launcher.SystemSettings
+HKLM\Software\Classes\Local Settings\Software\Microsoft\Windows\CurrentVersion\AppModel
+HKLM\Software\Classes\Microsoft.Website
+HKLM\Software\Classes\mscfile
+HKLM\Software\Classes\MSILink
+HKLM\Software\Classes\new
+HKLM\Software\Classes\OpenSearchProvider
+HKLM\Software\Classes\Printers
+HKLM\Software\Classes\SystemFileAssociations
+HKLM\Software\Classes\themefile
+HKLM\Software\Classes\TypeLib
+HKLM\Software\Classes\Wow6432Node\CLSID
+HKLM\Software\Classes\WOW6432Node\DirectShow
+HKLM\Software\Classes\WOW6432Node\Interface\{000214E2-0000-0000-C000-000000000046}
+HKLM\Software\Classes\WOW6432Node\Interface\{000214E3-0000-0000-C000-000000000046}
+HKLM\Software\Classes\WOW6432Node\Interface\{000214E6-0000-0000-C000-000000000046}
+HKLM\Software\Classes\WOW6432Node\Interface\{0002DF05-0000-0000-C000-000000000046}
+HKLM\Software\Classes\WOW6432Node\Interface\{106FE53D-7A09-42D0-862A-CC5B126E979A}
+HKLM\Software\Classes\WOW6432Node\Interface\{1AC3D9F0-175C-11D1-95BE-00609797EA4F}
+HKLM\Software\Classes\WOW6432Node\Interface\{1AF3A467-214F-4298-908E-06B03E0B39F9}
+HKLM\Software\Classes\WOW6432Node\Interface\{35BD3360-1B35-4927-BAE4-B10E70D99EFF}
+HKLM\Software\Classes\WOW6432Node\Interface\{3DCA391F-7A6C-4240-AF1C-FD209D7EC6E5}
+HKLM\Software\Classes\WOW6432Node\Interface\{47E7BB4D-2D83-4604-905C-0EE8EAB077A4}
+HKLM\Software\Classes\WOW6432Node\Interface\{504B27AA-001F-4179-9AD0-663A37C317A9}
+HKLM\Software\Classes\WOW6432Node\Interface\{6FAF1156-8855-47B5-BDC8-4555D13C095F}
+HKLM\Software\Classes\WOW6432Node\Interface\{87324FFD-BD0A-4DE8-840A-B60E345A336F}
+HKLM\Software\Classes\WOW6432Node\Interface\{8D79A7D3-6397-48EE-BC1F-1F021F8FFF1C}
+HKLM\Software\Classes\WOW6432Node\Interface\{CAAACA0F-9B02-4565-B3C5-9B20FC4DA566}
+HKLM\Software\Classes\WOW6432Node\Interface\{CD904A72-E610-47B1-AF43-2E47ADB17C70}
+HKLM\Software\Classes\WOW6432Node\Interface\{D133CE13-3537-48BA-93A7-AFCD5D2053B4}
+HKLM\Software\Classes\WOW6432Node\Interface\{D782CCBA-AFB0-43F1-94DB-FDA3779EACCB}
+HKLM\Software\Classes\WOW6432Node\Interface\{E5E81CAB-8345-4C45-A500-8DA9592F169A}
+HKLM\Software\Classes\WOW6432Node\Interface\{F11CBEA6-468C-4247-9726-6C75DCD1604C}
+HKLM\Software\Classes\WOW6432Node\Interface\{F66724EA-AE8F-41A2-B3F3-3D6581EA891C}
+HKLM\Software\Classes\WOW6432Node\Media Type
+HKLM\Software\Classes\WOW6432Node\MediaFoundation
+HKLM\Software\Microsoft\Cryptography\OID\EncodingType 0\CryptDllFindLocalizedName\LocalizedNames
+HKLM\Software\Microsoft\Cryptography\OID\EncodingType 0\CryptsvcDllCtrl\DEFAULT
+HKLM\Software\Microsoft\CTF
+HKLM\Software\Microsoft\DirectDraw
+HKLM\Software\Microsoft\DirectInput
+HKLM\Software\Microsoft\DirectMusic
+HKLM\Software\Microsoft\DirectPlay8
+HKLM\Software\Microsoft\DirectPlayNATHelp
+HKLM\Software\Microsoft\DirectShow
+HKLM\Software\Microsoft\DirectX
+HKLM\Software\Microsoft\FuzzyDS
+HKLM\Software\Microsoft\IME
+HKLM\Software\Microsoft\IMETC
+HKLM\Software\Microsoft\Input
+HKLM\Software\Microsoft\InputMethod
+HKLM\Software\Microsoft\MMC
+HKLM\Software\Microsoft\NetSh
+HKLM\Software\Microsoft\Ole
+HKLM\Software\Microsoft\Ole\Extensions
+HKLM\Software\Microsoft\PolicyManager
+HKLM\Software\Microsoft\RADAR
+HKLM\Software\Microsoft\Rpc\Extensions
+HKLM\Software\Microsoft\Rpc\SecurityService
+HKLM\Software\Microsoft\SecurityManager
+HKLM\Software\Microsoft\SystemCertificates\CA\Certificates\109F1CAED645BB78B3EA2B94C0697C740733031C
+HKLM\Software\Microsoft\SystemCertificates\CA\Certificates\FEE449EE0E3965A5246F000E87FDE2A065FD89D4
+HKLM\Software\Microsoft\SystemCertificates\ROOT\Certificates\18F7C1FCC3090203FD5BAA2F861A754976C8DD25
+HKLM\Software\Microsoft\SystemCertificates\ROOT\Certificates\245C97DF7514E7CF2DF8BE72AE957B9E04741E85
+HKLM\Software\Microsoft\SystemCertificates\ROOT\Certificates\3B1EFD3A66EA28B16697394703A72CA340A05BD5
+HKLM\Software\Microsoft\SystemCertificates\ROOT\Certificates\7F88CD7223F3C813818C994614A89C99FA3B5247
+HKLM\Software\Microsoft\SystemCertificates\ROOT\Certificates\8F43288AD272F3103B6FB1428485EA3014C0BCFE
+HKLM\Software\Microsoft\SystemCertificates\ROOT\Certificates\A43489159A520F0D93D032CCAF37E7FE20A8B419
+HKLM\Software\Microsoft\SystemCertificates\ROOT\Certificates\CDD4EEAE6000AC7F40C3802C171E30148030C072
+HKLM\Software\Microsoft\TabletTip\ZOrderNonCompete
+HKLM\Software\Microsoft\Windows NT\CurrentVersion\Console\TrueTypeFont
+HKLM\Software\Microsoft\Windows NT\CurrentVersion\DeviceDisplayObjects
+HKLM\Software\Microsoft\Windows NT\CurrentVersion\Drivers32
+HKLM\Software\Microsoft\Windows NT\CurrentVersion\GRE_Initialize
+HKLM\Software\Microsoft\Windows NT\CurrentVersion\IniFileMapping\win.ini
+HKLM\Software\Microsoft\Windows NT\CurrentVersion\Svchost
+HKLM\Software\Microsoft\Windows NT\CurrentVersion\SystemRestore
+HKLM\Software\Microsoft\Windows NT\CurrentVersion\Windows\Win32kWPP
+HKLM\Software\Microsoft\Windows NT\CurrentVersion\Winlogon
+HKLM\Software\Microsoft\Windows NT\CurrentVersion\WUDF\Services\{193a1820-d9ac-4997-8c55-be817523f6aa}
+HKLM\Software\Microsoft\Windows Search
+HKLM\Software\Microsoft\Windows\CurrentVersion\App Management\WindowsFeatureCategories
+HKLM\Software\Microsoft\Windows\CurrentVersion\AppX
+HKLM\Software\Microsoft\Windows\CurrentVersion\Authentication\Credential Providers\{2135f72a-90b5-4ed3-a7f1-8bb705ac276a}
+HKLM\Software\Microsoft\Windows\CurrentVersion\Authentication\Credential Providers\{25CBB996-92ED-457e-B28C-4774084BD562}
+HKLM\Software\Microsoft\Windows\CurrentVersion\Authentication\Credential Providers\{3dd6bec0-8193-4ffe-ae25-e08e39ea4063}
+HKLM\Software\Microsoft\Windows\CurrentVersion\Authentication\Credential Providers\{cb82ea12-9f71-446d-89e1-8d0924e1256e}
+HKLM\Software\Microsoft\Windows\CurrentVersion\Authentication\LogonUI\Background
+HKLM\Software\Microsoft\Windows\CurrentVersion\Authentication\LogonUI\BootAnimation
+HKLM\Software\Microsoft\Windows\CurrentVersion\Authentication\LogonUI\ClearAutologon
+HKLM\Software\Microsoft\Windows\CurrentVersion\Authentication\LogonUI\UserSwitch
+HKLM\Software\Microsoft\Windows\CurrentVersion\Authentication\LogonUI\ValidateUsername
+HKLM\Software\Microsoft\Windows\CurrentVersion\BitLocker
+HKLM\Software\Microsoft\Windows\CurrentVersion\CloudStore
+HKLM\Software\Microsoft\Windows\CurrentVersion\Control Panel
+HKLM\Software\Microsoft\Windows\CurrentVersion\Controls Folder
+HKLM\Software\Microsoft\Windows\CurrentVersion\Diagnostics
+HKLM\Software\Microsoft\Windows\CurrentVersion\Diagnostics\DiagTrack\TraceManager
+HKLM\Software\Microsoft\Windows\CurrentVersion\DriverSearching
+HKLM\Software\Microsoft\Windows\CurrentVersion\Explorer
+HKLM\Software\Microsoft\Windows\CurrentVersion\ImmersiveShell
+HKLM\Software\Microsoft\Windows\CurrentVersion\Internet Settings\ZoneMap\ProtocolDefaults
+HKLM\Software\Microsoft\Windows\CurrentVersion\Internet Settings\Zones\0
+HKLM\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer
+HKLM\Software\Microsoft\Windows\CurrentVersion\PreviewHandlers
+HKLM\Software\Microsoft\Windows\CurrentVersion\PropertySystem\SystemPropertyHandlers
+HKLM\Software\Microsoft\Windows\CurrentVersion\PushNotifications\Applications\Windows.System.AppInitiatedDownload
+HKLM\Software\Microsoft\Windows\CurrentVersion\PushNotifications\Applications\Windows.SystemToast.Explorer
+HKLM\Software\Microsoft\Windows\CurrentVersion\PushNotifications\Applications\Windows.SystemToast.LowDisk
+HKLM\Software\Microsoft\Windows\CurrentVersion\PushNotifications\Applications\Windows.SystemToast.RasToastNotifier
+HKLM\Software\Microsoft\Windows\CurrentVersion\Reliability\MemoryDiagnostic
+HKLM\Software\Microsoft\Windows\CurrentVersion\Reliability\WinRE
+HKLM\Software\Microsoft\Windows\CurrentVersion\Shell Extensions\Approved
+HKLM\Software\Microsoft\Windows\CurrentVersion\ShellCompatibility\InboxApp
+HKLM\Software\Microsoft\Windows\CurrentVersion\SMI
+HKLM\Software\Microsoft\Windows\CurrentVersion\ThemeManager
+HKLM\Software\Microsoft\Windows\CurrentVersion\Themes
+HKLM\Software\Microsoft\Windows\CurrentVersion\TouchKeyboard\Users
+HKLM\Software\Microsoft\Windows\CurrentVersion\UserPictureChange
+HKLM\Software\Microsoft\Windows\CurrentVersion\WindowTabManager
+HKLM\Software\Microsoft\Windows\Dwm
+HKLM\Software\Microsoft\Windows\Tablet PC
+HKLM\Software\Microsoft\WindowsRuntime
+HKLM\Software\Microsoft\WindowsRuntime\ActivatableClassId
+HKLM\Software\Microsoft\WindowsRuntime\Server
+HKLM\Software\Policies\Microsoft\Windows\CurrentVersion\Internet Settings
+HKLM\Software\Wow6432Node
