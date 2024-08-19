@@ -1,4 +1,0 @@
-display.inf
-displayoverride.inf
-monitor.inf
-winusb.inf

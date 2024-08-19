@@ -1,2 +1,0 @@
-Windows\servicing\Version
-Windows\WinSxS\amd64_microsoft-windows-servicingstack_*_*.*.*.*_none_*

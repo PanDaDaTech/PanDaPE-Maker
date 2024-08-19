@@ -1,4 +1,0 @@
-Windows\System32\config\COMPONENTS
-Windows\System32\SSShim.dll
-Windows\SysWOW64\SSShim.dll
-Users\Default\NTUSER.DAT
