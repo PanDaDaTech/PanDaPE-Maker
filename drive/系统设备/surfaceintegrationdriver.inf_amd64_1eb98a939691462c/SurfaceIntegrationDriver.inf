@@ -1,0 +1,138 @@
+;
+; SurfaceIntegrationDriver.inf
+;
+; Copyright (C) 2014 Microsoft Corporation.  All Rights Reserved.
+
+[Version]
+Signature="$WINDOWS NT$"
+Class=System
+ClassGuid={4D36E97D-E325-11CE-BFC1-08002BE10318}
+Provider=%ManufacturerName%
+CatalogFile=SurfaceIntegrationDriver.cat
+DriverVer = 08/11/2021,66.36.139.0
+PnpLockdown=1
+
+[DestinationDirs]
+DefaultDestDir                = 12                            ; %WinDir%\System32\Drivers
+ProvisioningPackage_CopyFiles = 10,Provisioning\Packages      ; %WinDir%\Provisioning\Packages
+
+; ================= Class section =====================
+
+[SourceDisksNames]
+1 = %DiskName%,,,""
+
+[SourceDisksFiles]
+Surface.Power.Policy.Defaults.ppkg       = 1,,
+SurfaceIntegrationDriver.sys             = 1,,
+vzw.ppkg  = 1,,
+Surface_att.ppkg  = 1,,
+Surface.Cosa.ATT.SUPL.ppkg  = 1,,
+
+;*****************************************
+; Install Section
+;*****************************************
+
+[Manufacturer]
+%ManufacturerName%=Standard,NTamd64
+
+[Standard.NTamd64]
+%SurfaceIntegrationDriver.DeviceDesc%=SurfaceIntegrationDriver_Device, ACPI\MSHW0263
+
+[SurfaceIntegrationDriver_Device.NT]
+CopyFiles=DefaultDestDir,ProvisioningPackage_CopyFiles
+AddReg=SurfaceIntegrationDriver_Service_AddReg
+AddPowerSetting = SurfacePowerOverlayPlanSettings
+
+[DefaultDestDir]
+SurfaceIntegrationDriver.sys
+
+[ProvisioningPackage_CopyFiles]
+Surface.Power.Policy.Defaults.ppkg
+vzw.ppkg
+Surface_att.ppkg
+Surface.Cosa.ATT.SUPL.ppkg
+
+;-------------- Service installation
+[SurfaceIntegrationDriver_Device.NT.Services]
+;
+; %SPSVCINST_ASSOCSERVICE% should only be specified if this is a function driver.
+;
+AddService = SurfaceIntegrationDriver,%SPSVCINST_ASSOCSERVICE%, SurfaceIntegrationDriver_Service_Inst
+
+;-------------- Event installation
+[SurfaceIntegrationDriver_Device.NT.Events]
+AddEventProvider = {2CEB8B14-7AB2-4EE1-9CF4-A492FE0BCA11},SurfaceIntegrationDriver_EventProviderInstall
+
+;*****************************************
+; Install Surface-power-settings for overlay plans
+;*****************************************
+[SurfacePowerOverlayPlanSettings]
+Subgroup = {bfeba2e4-fdcc-41d9-93f4-3f6991c1f730}, "Surface Overlay Power Settings Subgroup",  "Surface Overlay Power Settings Subgroup"
+Setting  = {a4a0ab02-11f1-4584-bc52-cbb98eabdb0b}, "Surface Overlay Power Setting",            "Surface Overlay Power Setting"
+ 
+Value = %POWER_POLICY_TYPICAL_POWER_SAVINGS_ON_AC%,           "Balanced AC",           "Balanced AC",         %REG_DWORD%, %POWER_POLICY_TYPICAL_POWER_SAVINGS_ON_AC%
+Value = %POWER_POLICY_TYPICAL_POWER_SAVINGS_ON_DC%,           "Balanced DC",           "Balanced DC",         %REG_DWORD%, %POWER_POLICY_TYPICAL_POWER_SAVINGS_ON_DC%
+Value = %POWER_POLICY_OVERLAY_SCHEME_HIGH_PERFORMANCE_ON_AC%, "High Performance AC",   "High Performance AC", %REG_DWORD%, %POWER_POLICY_OVERLAY_SCHEME_HIGH_PERFORMANCE_ON_AC%
+Value = %POWER_POLICY_OVERLAY_SCHEME_HIGH_PERFORMANCE_ON_DC%, "High Performance DC",   "High Performance DC", %REG_DWORD%, %POWER_POLICY_OVERLAY_SCHEME_HIGH_PERFORMANCE_ON_DC%
+Value = %POWER_POLICY_OVERLAY_SCHEME_MAX_PERFORMANCE_ON_AC%,  "Max Performance AC",    "Max Performance AC",  %REG_DWORD%, %POWER_POLICY_OVERLAY_SCHEME_MAX_PERFORMANCE_ON_AC%
+Value = %POWER_POLICY_OVERLAY_SCHEME_MAX_PERFORMANCE_ON_DC%,  "Max Performance DC",    "Max Performance DC",  %REG_DWORD%, %POWER_POLICY_OVERLAY_SCHEME_MAX_PERFORMANCE_ON_DC%
+
+;Defaults for default power scheme/personality (on AC and DC)
+Default = %GUID_TYPICAL_POWER_SAVINGS%, %AC%, %POWER_POLICY_TYPICAL_POWER_SAVINGS_ON_AC%
+Default = %GUID_TYPICAL_POWER_SAVINGS%, %DC%, %POWER_POLICY_TYPICAL_POWER_SAVINGS_ON_DC%
+
+;Defaults for each overlay power plan (on AC and DC)
+Default = %GUID_POWER_POLICY_OVERLAY_SCHEME_HIGH_PERFORMANCE%, %AC%, %POWER_POLICY_OVERLAY_SCHEME_HIGH_PERFORMANCE_ON_AC%
+Default = %GUID_POWER_POLICY_OVERLAY_SCHEME_HIGH_PERFORMANCE%, %DC%, %POWER_POLICY_OVERLAY_SCHEME_HIGH_PERFORMANCE_ON_DC%
+Default = %GUID_POWER_POLICY_OVERLAY_SCHEME_MAX_PERFORMANCE%,  %AC%, %POWER_POLICY_OVERLAY_SCHEME_MAX_PERFORMANCE_ON_AC%
+Default = %GUID_POWER_POLICY_OVERLAY_SCHEME_MAX_PERFORMANCE%,  %DC%, %POWER_POLICY_OVERLAY_SCHEME_MAX_PERFORMANCE_ON_DC%
+
+; -------------- SurfaceIntegrationDriver driver install sections
+[SurfaceIntegrationDriver_Service_Inst]
+DisplayName    = %SurfaceIntegrationDriver.SVCDESC%
+ServiceType    = 1               ; SERVICE_KERNEL_DRIVER
+StartType      = 3               ; SERVICE_DEMAND_START
+ErrorControl   = 1               ; SERVICE_ERROR_NORMAL
+ServiceBinary  = %12%\SurfaceIntegrationDriver.sys
+
+[SurfaceIntegrationDriver_Service_AddReg]
+;;HKLM,System\CurrentControlSet\Services\SurfaceIntegrationDriver\Parameters, "ImageNameSID", %REG_SZ%, "(Image.Name)" ; Updated with post processing
+HKLM,System\CurrentControlSet\Services\SurfaceService, "ApplyProvisioningPackage",        %REG_DWORD%, 0x1        ; Apply Provisioning Package
+HKLM,System\CurrentControlSet\Services\SurfaceService, "PlatformKipSupported",            %REG_DWORD%, 0x0        ; KIP is not supported on this platform
+HKLM,System\CurrentControlSet\Services\SurfaceService, "IntegratedPowerPlans",            %REG_DWORD%, 0x1        ; Enable SIPM (PL/Tau Clamps)
+HKLM,SYSTEM\CurrentControlSet\Control\Power,           "UserBatteryDischargeEstimator",   %REG_DWORD%, 0xFFFFFFFF ; Hide estimated time to discharge remaining battery
+HKLM,SYSTEM\CurrentControlSet\Control\Power,"EnableScreenRefreshOnPowerButtonLongPress",  %REG_DWORD%, 0x00000001
+
+[SurfaceIntegrationDriver_EventProviderInstall]
+ProviderName=Microsoft-Surface-SurfaceIntegrationDriver
+ResourceFile=%12%\SurfaceIntegrationDriver.sys
+MessageFile=%12%\SurfaceIntegrationDriver.sys
+AddChannel= Microsoft-Surface-SurfaceIntegrationDriver/Operational,0x2,SurfaceIntegrationDriver_ChannelInstall
+
+[SurfaceIntegrationDriver_ChannelInstall]
+Isolation         = 2
+Enabled           = 1
+
+[Strings]
+SPSVCINST_ASSOCSERVICE= 0x00000002
+ManufacturerName="Surface"
+DiskName = "Surface Integration Driver Installation Disk"
+SurfaceIntegrationDriver.DeviceDesc = "Surface Integration"
+SurfaceIntegrationDriver.SVCDESC = "Surface Integration Driver"
+GUID_TYPICAL_POWER_SAVINGS                        = "{381b4222-f694-41f0-9685-ff5bb260df2e}"
+GUID_POWER_POLICY_OVERLAY_SCHEME_HIGH_PERFORMANCE = "{3af9B8d9-7c97-431d-ad78-34a8bfea439f}"
+GUID_POWER_POLICY_OVERLAY_SCHEME_MAX_PERFORMANCE  = "{ded574b5-45a0-4f42-8737-46345c09c238}"
+AC        = 0
+DC        = 1
+POWER_POLICY_INVALID                               = 0 ; Unknown/invalid state
+POWER_POLICY_TYPICAL_POWER_SAVINGS_ON_AC           = 1 ; Balanced (or) default suggested slider state on AC
+POWER_POLICY_TYPICAL_POWER_SAVINGS_ON_DC           = 2 ; Balanced (or) default suggested slider state on DC
+POWER_POLICY_OVERLAY_SCHEME_HIGH_PERFORMANCE_ON_AC = 3 ; Slider High Performance on AC
+POWER_POLICY_OVERLAY_SCHEME_HIGH_PERFORMANCE_ON_DC = 4 ; Slider High Performance on DC
+POWER_POLICY_OVERLAY_SCHEME_MAX_PERFORMANCE_ON_AC  = 5 ; Slider Max Performance on AC
+POWER_POLICY_OVERLAY_SCHEME_MAX_PERFORMANCE_ON_DC  = 6 ; Slider Max Performance on DC
+REG_EXPAND_SZ          = 0x00020000 
+REG_DWORD              = 0x00010001 
+REG_MULTI_SZ           = 0x00010000
+REG_BINARY             = 0x00000001
+REG_SZ                 = 0x00000000

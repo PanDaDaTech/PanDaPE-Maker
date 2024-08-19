@@ -1,0 +1,90 @@
+;
+; DMSDPUSB.inf
+;
+
+[Version]
+Signature="$WINDOWS NT$"
+Class=System
+ClassGuid={4D36E97D-E325-11CE-BFC1-08002BE10318}
+Provider=%ManufacturerName%
+CatalogFile=dmsdpvirtualbus.cat
+DriverVer = 01/30/2024,18.56.33.501
+
+[DestinationDirs]
+DefaultDestDir = 12
+DMSDPUSB_Device_CoInstaller_CopyFiles = 11
+
+[SourceDisksNames]
+1 = %DiskName%,,,""
+
+[SourceDisksFiles]
+dmsdpvirtualbus.sys  = 1,,
+;
+
+
+;*****************************************
+; Install Section
+;*****************************************
+
+[Manufacturer]
+%ManufacturerName%=Standard,NTamd64
+
+[Standard.NTamd64]
+%DMSDPUSB.DeviceDesc%=DMSDPUSB_Device, USB\VID_hnhn&PID_dmdm
+
+[DMSDPUSB_Device.NT]
+CopyFiles=Drivers_Dir
+
+[Drivers_Dir]
+dmsdpvirtualbus.sys
+
+[DMSDPUSB_Device.NT.HW]
+AddReg=DMSDPUSB_AddReg
+
+[DMSDPUSB_AddReg]
+; By default, USBDevice class uses iProduct descriptor to name the device in
+; Device Manager on Windows 8 and higher.
+; Uncomment for this device to use %DeviceName% on Windows 8 and higher:
+;HKR,,FriendlyName,,%DMSDPUSB.DeviceDesc%
+
+;-------------- Service installation
+[DMSDPUSB_Device.NT.Services]
+AddService = DMSDPUSB,%SPSVCINST_ASSOCSERVICE%, DMSDPUSB_Service_Inst
+
+; -------------- DMSDPUSB driver install sections
+[DMSDPUSB_Service_Inst]
+DisplayName    = %DMSDPUSB.SVCDESC%
+ServiceType    = 1               ; SERVICE_KERNEL_DRIVER
+StartType      = 3               ; SERVICE_DEMAND_START
+ErrorControl   = 1               ; SERVICE_ERROR_NORMAL
+ServiceBinary  = %12%\dmsdpvirtualbus.sys
+
+;
+;--- DMSDPUSB_Device Coinstaller installation ------
+;
+
+[DMSDPUSB_Device.NT.CoInstallers]
+AddReg=DMSDPUSB_Device_CoInstaller_AddReg
+CopyFiles=DMSDPUSB_Device_CoInstaller_CopyFiles
+
+[DMSDPUSB_Device_CoInstaller_AddReg]
+;
+
+
+[DMSDPUSB_Device_CoInstaller_CopyFiles]
+;
+
+
+[DMSDPUSB_Device.NT.Wdf]
+KmdfService =  DMSDPUSB, DMSDPUSB_wdfsect
+[DMSDPUSB_wdfsect]
+KmdfLibraryVersion = 1.15
+
+[Strings]
+SPSVCINST_ASSOCSERVICE= 0x00000002
+ManufacturerName="HONOR" ;TODO: Replace with your manufacturer name
+ClassName="Universal Serial Bus devices"
+DiskName = "Dmsdp Virtual Bus Installation Disk"
+DMSDPUSB.DeviceDesc = "Dmsdp Virtual Bus"
+DMSDPUSB.SVCDESC = "Dmsdp Virtual Bus Service"
+REG_MULTI_SZ = 0x00010000
