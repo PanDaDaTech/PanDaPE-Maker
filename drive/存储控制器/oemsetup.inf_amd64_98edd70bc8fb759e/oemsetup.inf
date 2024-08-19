@@ -1,0 +1,152 @@
+ ;  -- This file contains descriptions of the PERC RAID family 
+;             of RAID Controllers
+;
+; Copyright © 2005, LSI Corp.,
+[version]
+Signature="$Windows NT$"
+Class=SCSIAdapter
+ClassGUID={4D36E97B-E325-11CE-BFC1-08002BE10318}
+Provider=%DELL%
+CatalogFile.ntamd64=percsas2.cat
+DriverVer=08/09/2010,4.31.1.64
+     
+[DestinationDirs]
+DefaultDestDir = 12 ; DIRID_DRIVERS
+
+[SourceDisksFiles.amd64]
+percsas2.sys = 1,,11136,,,,,,
+
+[SourceDisksNames]
+1 = %DISK%,percsas2.sys,,
+
+
+[ControlFlags]
+;
+; Exclude the following PnP devices from Select Device list.
+;
+ExcludeFromSelect = PCI\VEN_1000&DEV_0079
+ExcludeFromSelect = PCI\VEN_1000&DEV_0078
+ExcludeFromSelect = PCI\VEN_1000&DEV_0079&SUBSYS_1F151028
+ExcludeFromSelect = PCI\VEN_1000&DEV_0079&SUBSYS_1F161028
+ExcludeFromSelect = PCI\VEN_1000&DEV_0079&SUBSYS_1F171028
+ExcludeFromSelect = PCI\VEN_1000&DEV_0079&SUBSYS_1F181028
+ExcludeFromSelect = PCI\VEN_1000&DEV_0079&SUBSYS_1F191028
+ExcludeFromSelect = PCI\VEN_1000&DEV_0079&SUBSYS_1F1A1028
+ExcludeFromSelect = PCI\VEN_1000&DEV_0079&SUBSYS_1F1B1028
+[Manufacturer]
+%DELL%=DELL, NTamd64
+
+     
+
+[DELL.NTamd64]
+;----------- WINDOWS Server 2008/Vista x64 INSTALL SECTION ----------------------------------------------------------
+
+%PERCH800Adp.DeviceDesc% = megasas_Inst, PCI\VEN_1000&DEV_0079&SUBSYS_1F151028
+%PERCH700Adp.DeviceDesc% = megasas_Inst, PCI\VEN_1000&DEV_0079&SUBSYS_1F161028
+%PERCH700Int.DeviceDesc% = megasas_Inst, PCI\VEN_1000&DEV_0079&SUBSYS_1F171028
+%PERCH700Mod.DeviceDesc% = megasas_Inst, PCI\VEN_1000&DEV_0079&SUBSYS_1F181028
+%PERCH700.DeviceDesc% = megasas_Inst, PCI\VEN_1000&DEV_0079&SUBSYS_1F191028
+%PERCH800PAdp.DeviceDesc% = megasas_Inst, PCI\VEN_1000&DEV_0079&SUBSYS_1F1A1028
+%PERCH800.DeviceDesc% = megasas_Inst, PCI\VEN_1000&DEV_0079&SUBSYS_1F1B1028
+%PERCGeneric.DeviceDesc% = megasas_Inst, PCI\VEN_1000&DEV_0079
+%PERCGeneric.DeviceDesc% = megasas_Inst, PCI\VEN_1000&DEV_0078
+
+[megasas_Inst.ntamd64]
+CopyFiles = @percsas2.sys
+
+[megasas_Inst.ntamd64.HW]
+DelReg = LegacyScsiportValues
+AddReg = megasas_AddReg.ntamd64.HW
+
+[megasas_AddReg.ntamd64.HW]
+HKR, "ScsiPort", "NeedsSystemShutdownNotification", 0x00010001, 1
+HKR, "Interrupt Management", 0x00000010
+HKR, "Interrupt Management\MessageSignaledInterruptProperties",  0x00000010
+HKR, "Interrupt Management\MessageSignaledInterruptProperties", MSISupported, 0x00010001, 1
+HKR, "Interrupt Management\MessageSignaledInterruptProperties", MessageNumberLimit, 0x00010001, 4
+HKR, "Interrupt Management\Affinity Policy", 0x00000010
+HKR, "Interrupt Management\Affinity Policy", DevicePolicy, 0x00010001, 0x05
+HKLM, SYSTEM\CurrentControlSet\Services\percsas2\Parameters\Device,DriverParameter,0x00000002,"enableMSI=1"
+
+
+     
+[megasas_Inst.ntamd64.Services]
+AddService = percsas2, %SPSVCINST_ASSOCSERVICE%, megasas_Service_Inst,Miniport_EventLog_Inst
+
+
+[megasas_Service_Inst]
+ServiceType    = %SERVICE_KERNEL_DRIVER% 
+StartType      = %SERVICE_BOOT_START% 
+ErrorControl   = %SERVICE_ERROR_NORMAL% 
+ServiceBinary  = %12%\percsas2.sys
+LoadOrderGroup = SCSI Miniport
+AddReg         = pnpsafe_pci_addreg
+AddReg         = bus_type_raid
+AddReg         = WINLH_CriticalDataBase
+
+
+;************************************************************* 
+;The EventLog entries are the same for all SCSI miniports. 
+[Miniport_EventLog_Inst]
+AddReg = Miniport_EventLog_AddReg
+     
+[pnpsafe_pci_addreg]
+HKR, "Parameters\PnpInterface", "5", 0x00010001, 0x00000001
+HKR, "Parameters\Device", "NumberOfRequests", 0x00010001, 0x000003e8
+HKLM,"System\CurrentControlSet\Services\Disk","TimeOutValue",0x00010001,0x000000A0
+
+[bus_type_raid]
+HKR, "Parameters", "BusType", 0x00010001, 0x00000008
+
+[WINLH_CriticalDataBase]
+
+HKLM,SYSTEM\CurrentControlSet\Control\CriticalDeviceDataBase\pci#ven_1000&dev_0079,ClassGUID,,%ClassGUID%
+HKLM,SYSTEM\CurrentControlSet\Control\CriticalDeviceDataBase\pci#ven_1000&dev_0079,Service,,%Service%
+HKLM,SYSTEM\CurrentControlSet\Control\CriticalDeviceDataBase\pci#ven_1000&dev_0078,ClassGUID,,%ClassGUID%
+HKLM,SYSTEM\CurrentControlSet\Control\CriticalDeviceDataBase\pci#ven_1000&dev_0078,Service,,%Service%
+HKLM,SYSTEM\CurrentControlSet\Control\CriticalDeviceDataBase\pci#ven_1000&dev_0079&subsys_1F151028,ClassGUID,,%ClassGUID%
+HKLM,SYSTEM\CurrentControlSet\Control\CriticalDeviceDataBase\pci#ven_1000&dev_0079&subsys_1F151028,Service,,%Service%
+HKLM,SYSTEM\CurrentControlSet\Control\CriticalDeviceDataBase\pci#ven_1000&dev_0079&subsys_1F161028,ClassGUID,,%ClassGUID%
+HKLM,SYSTEM\CurrentControlSet\Control\CriticalDeviceDataBase\pci#ven_1000&dev_0079&subsys_1F161028,Service,,%Service%
+HKLM,SYSTEM\CurrentControlSet\Control\CriticalDeviceDataBase\pci#ven_1000&dev_0079&subsys_1F171028,ClassGUID,,%ClassGUID%
+HKLM,SYSTEM\CurrentControlSet\Control\CriticalDeviceDataBase\pci#ven_1000&dev_0079&subsys_1F171028,Service,,%Service%
+HKLM,SYSTEM\CurrentControlSet\Control\CriticalDeviceDataBase\pci#ven_1000&dev_0079&subsys_1F181028,ClassGUID,,%ClassGUID%
+HKLM,SYSTEM\CurrentControlSet\Control\CriticalDeviceDataBase\pci#ven_1000&dev_0079&subsys_1F181028,Service,,%Service%
+HKLM,SYSTEM\CurrentControlSet\Control\CriticalDeviceDataBase\pci#ven_1000&dev_0079&subsys_1F191028,ClassGUID,,%ClassGUID%
+HKLM,SYSTEM\CurrentControlSet\Control\CriticalDeviceDataBase\pci#ven_1000&dev_0079&subsys_1F191028,Service,,%Service%
+HKLM,SYSTEM\CurrentControlSet\Control\CriticalDeviceDataBase\pci#ven_1000&dev_0079&subsys_1F1A1028,ClassGUID,,%ClassGUID%
+HKLM,SYSTEM\CurrentControlSet\Control\CriticalDeviceDataBase\pci#ven_1000&dev_0079&subsys_1F1A1028,Service,,%Service%
+HKLM,SYSTEM\CurrentControlSet\Control\CriticalDeviceDataBase\pci#ven_1000&dev_0079&subsys_1F1B1028,ClassGUID,,%ClassGUID%
+HKLM,SYSTEM\CurrentControlSet\Control\CriticalDeviceDataBase\pci#ven_1000&dev_0079&subsys_1F1B1028,Service,,%Service%
+     
+[Miniport_EventLog_AddReg]
+HKR,,EventMessageFile,%REG_EXPAND_SZ%,%%SystemRoot%%\System32\IoLogMsg.dll 
+HKR,,TypesSupported,%REG_DWORD%,7
+
+[LegacyScsiportValues]
+HKR,Scsiport
+
+[Strings]
+;------------------MegaRAID----------------------------
+DELL="DELL"
+DISK ="DELL PERC RAID Driver ( for x64)"
+PERCGeneric.DeviceDesc = "PERC RAID Adapter"
+PERCH800Adp.DeviceDesc = "PERC H800 Adapter"
+PERCH700Adp.DeviceDesc = "PERC H700 Adapter"
+PERCH700.DeviceDesc = "PERC H700"
+PERCH700Int.DeviceDesc = "PERC H700 Integrated"
+PERCH700Mod.DeviceDesc = "PERC H700 Modular"
+PERCH800PAdp.DeviceDesc = "PERC H800 Proto Adapter"
+PERCH800.DeviceDesc = "PERC H800"
+
+Service = "percsas2"
+ClassGUID = "{4D36E97B-E325-11CE-BFC1-08002BE10318}"     
+     
+;******************************************* 
+;Handy macro substitutions (non-localizable) 
+SPSVCINST_ASSOCSERVICE = 0x00000002
+SERVICE_KERNEL_DRIVER  = 1
+SERVICE_BOOT_START     = 0
+SERVICE_ERROR_NORMAL   = 1
+REG_EXPAND_SZ          = 0x00020000
+REG_DWORD              = 0x00010001
