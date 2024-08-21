@@ -330,3 +330,27 @@ Windows\System32\shdocvw.dll
 Windows\System32\tcpipcfg.dll
 Windows\SystemResources\netcenter.dll.mun
 Windows\SystemResources\netshell.dll.mun
+
+# netsh 支持
+Windows\System32\authfwcfg.dll 
+Windows\System32\dot3api.dll 
+Windows\System32\dot3cfg.dll 
+Windows\System32\fwcfg.dll 
+Windows\System32\hnetmon.dll 
+Windows\System32\ifmon.dll 
+Windows\System32\mobilenetworking.dll 
+Windows\System32\nshhttp.dll 
+Windows\System32\nshipsec.dll 
+Windows\System32\nshwfp.dll 
+Windows\System32\P2P.dll 
+Windows\System32\p2pnetsh.dll 
+Windows\System32\PeerDistSh.dll 
+Windows\System32\polstore.dll 
+Windows\System32\rpcnsh.dll 
+Windows\System32\wcmapi.dll 
+Windows\System32\WcnNetsh.dll 
+Windows\System32\whhelper.dll 
+Windows\System32\winipsec.dll 
+Windows\System32\wshelper.dll 
+Windows\System32\wwancfg.dll 
+Windows\System32\wwapi.dll 
