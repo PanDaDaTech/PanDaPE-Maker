@@ -1,4 +1,0 @@
-Windows Registry Editor Version 5.00
-
-[HKEY_LOCAL_MACHINE\Tmp_SOFTWARE\Classes\CLSID\{8856F961-340A-11D0-A96B-00C04FD705A2}\InProcServer32]
-@="X:\\Windows\\System32\\ieframe.dll"

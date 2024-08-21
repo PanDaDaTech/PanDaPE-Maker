@@ -1,0 +1,4 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_LOCAL_MACHINE\Tmp_SYSTEM\Setup]
+"CmdLine"="Pecmd.exe Main %Windir%\\Pecmd.ini"

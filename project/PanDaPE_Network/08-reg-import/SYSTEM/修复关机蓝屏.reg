@@ -1,7 +1,0 @@
-Windows Registry Editor Version 5.00
-
-[HKEY_LOCAL_MACHINE\Tmp_SYSTEM\ControlSet001\Control\NetworkSetup2\Filters\{3BFD7820-D65C-4C1B-9FEA-983A019639EA}\Kernel]
-"FilterClass"="ms_medium_converter_top"
-
-[HKEY_LOCAL_MACHINE\Tmp_SYSTEM\ControlSet001\Control\NetworkSetup2\Filters\{B70D6460-3635-4D42-B866-B8AB1A24454C}\Kernel]
-"FilterClass"="ms_medium_converter_top"
