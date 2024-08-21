@@ -15,3 +15,20 @@ rd /s /q "%X%\Windows\servicing"
 del /f /q /a "%X%\Windows\INF\setupapi.offline.log"
 del /f /q /a "%X%\Windows\System32\config\*.LOG*"
 del /f /q /a "%X%\Windows\System32\config\*{*}*"
+
+echo 精简无用注册表项
+reg load HKLM\Tmp_SYSTEM %X%\Windows\System32\config\SYSTEM
+reg load HKLM\Tmp_DRIVERS %X%\Windows\System32\config\DRIVERS
+reg import %cd%\OEM-DRV-lite.reg
+reg import %cd%\OEM-SYS-lite.reg
+reg unload HKLM\Tmp_SYSTEM
+reg unload HKLM\Tmp_DRIVERS
+
+echo 压缩注册表
+ru.exe -accepteula -h "%X%\Windows\System32\config\DRIVERS" hklm\drv > nul 2>&1
+ru.exe -accepteula -h "%X%\Windows\System32\config\SOFTWARE" hklm\soft > nul 2>&1
+ru.exe -accepteula -h "%X%\Windows\System32\config\SYSTEM" hklm\sys > nul 2>&1
+
+echo 清理注册表日志
+del /f /q /a "%X%\Windows\System32\config\*.LOG*" 1>nul 2>nul
+del /f /q /a "%X%\Windows\System32\config\*{*}*" 1>nul 2>nul
