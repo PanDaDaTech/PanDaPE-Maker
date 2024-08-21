@@ -1,4 +1,12 @@
 display.inf
 displayoverride.inf
 monitor.inf
+wpdcomp.inf
+wpdfs.inf
+wpdmtp.inf
+wpdmtphw.inf
+wudfusbcciddriver.inf
 winusb.inf
+netrndis.inf
+rndiscmp.inf
+wceisvista.inf
