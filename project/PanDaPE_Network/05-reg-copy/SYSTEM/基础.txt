@@ -10,9 +10,22 @@ HKLM\SYSTEM\ControlSet001\Services\ShellHWDetection
 HKLM\SYSTEM\ControlSet001\Services\Themes
 HKLM\SYSTEM\ControlSet001\Services\WindowsTrustedRT
 HKLM\SYSTEM\ControlSet001\services\WSearchIdxPi
+HKLM\SYSTEM\ControlSet001\Services\UserManager
 HKLM\SYSTEM\ControlSet001\Services\msiserver
+HKLM\SYSTEM\ControlSet001\Services\MSiSCSI
+HKLM\SYSTEM\ControlSet001\Services\iScsiPrt
+HKLM\SYSTEM\ControlSet001\Services\WINUSB
+HKLM\SYSTEM\ControlSet001\Services\WlanSvc
+HKLM\SYSTEM\ControlSet001\Services\WPDBusEnum
+HKLM\SYSTEM\ControlSet001\Services\WpdUpFltr
+HKLM\SYSTEM\ControlSet001\Services\WUDFPf
+HKLM\SYSTEM\ControlSet001\Services\WUDFRd
 HKLM\SYSTEM\DriverDatabase\DeviceIds\USB\Class_11&SubClass_00&Prot_00
 HKLM\SYSTEM\DriverDatabase\DeviceIds\USB\Class_ff&SubClass_42&Prot_01
 HKLM\SYSTEM\DriverDatabase\DeviceIds\USB\MS_COMP_WINUSB
+HKLM\SYSTEM\DriverDatabase\DriverInfFiles\c_ucm.inf
+HKLM\SYSTEM\DriverDatabase\DriverInfFiles\netvwifibus.inf
+HKLM\SYSTEM\DriverDatabase\DriverInfFiles\UcmUcsiAcpiClient.inf
+HKLM\SYSTEM\DriverDatabase\DriverInfFiles\winusb.inf
 HKLM\SYSTEM\Software\Microsoft\BuildLayers\DesktopEditions
 

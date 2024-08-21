@@ -12,3 +12,5 @@ HKLM\DRIVERS\DriverDatabase\DeviceIds\PCI\VEN_1002&DEV_4752
 HKLM\DRIVERS\DriverDatabase\DeviceIds\PCI\VEN_102B&DEV_0522
 HKLM\DRIVERS\DriverDatabase\DeviceIds\PCI\VEN_1039&DEV_6325
 HKLM\DRIVERS\DriverDatabase\DriverFiles
+HKLM\Drivers\DriverDatabase\DeviceIds\USB\Class_EF&SubClass_04&Prot_01
+HKLM\Drivers\DriverDatabase\DeviceIds\USB\MS_COMP_RNDIS&MS_SUBCOMP_5162001

@@ -16,8 +16,6 @@ echo ²¹³ä RNDIS ×¢²á±í
 call RegCopy HKLM\Drivers\DriverDatabase\DeviceIds\{4d36e972-e325-11ce-bfc1-08002be10318}
 call RegCopy HKLM\Drivers\DriverDatabase\DeviceIds\ms_rndisusb
 call RegCopy HKLM\Drivers\DriverDatabase\DeviceIds\ms_rndisusb6
-call RegCopy HKLM\Drivers\DriverDatabase\DeviceIds\USB\Class_EF&SubClass_04&Prot_01
-call RegCopy HKLM\Drivers\DriverDatabase\DeviceIds\USB\MS_COMP_RNDIS&MS_SUBCOMP_5162001
 
 call RegCopy /-s HKLM\Software\Microsoft\Windows NT\CurrentVersion
 
