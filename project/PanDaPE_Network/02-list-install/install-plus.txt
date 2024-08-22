@@ -1,5 +1,11 @@
 ;=============PanDaPE-Add===================
 
+# apppatch
+Windows\apppatch\drvmain.sdb
+Windows\apppatch\MergeSdbFilesSource\sysMerge.sdb
+Windows\apppatch\msimain.sdb
+Windows\apppatch\sysmain.sdb
+
 # 参考 Kuer 增加文件
 Windows\System32\wbem\cimwin32.dll
 Windows\System32\wbem\cimwin32.mof
@@ -30,19 +36,6 @@ Windows\System32\zh-CN\mshtml.dll.mui
 Windows\SysWOW64\d3d10warp.dll
 Windows\SysWOW64\esent.dll
 Windows\SysWOW64\ieframe.dll
-Windows\SysWOW64\wbem\AutoRecover
-Windows\SysWOW64\wbem\Logs
-Windows\SysWOW64\wbem\Repository
-Windows\SysWOW64\wbem\xml
-Windows\SysWOW64\wbem\fastprox.dll
-Windows\SysWOW64\wbem\newdev.mof
-Windows\SysWOW64\wbem\setupapi.mof
-Windows\SysWOW64\wbem\wbemdisp.dll
-Windows\SysWOW64\wbem\wbemdisp.tlb
-Windows\SysWOW64\wbem\wbemprox.dll
-Windows\SysWOW64\wbem\wbemsvc.dll
-Windows\SysWOW64\wbem\wmiutils.dll
-Windows\SysWOW64\wbem\zh-CN\wmiutils.dll.mui
 
 # ATIH 依赖需要（外置）
 Windows\System32\shacct.dll
@@ -53,9 +46,6 @@ Windows\System32\quartz.dll
 
 # 微信依赖需要
 Windows\SysWOW64\d3d9.dll
-
-# 添加新版 Diskgenius 所需 .dll，防止启动慢
-Windows\System32\swprv.dll
 
 # 爱思远控需要
 Windows\System32\SAS.dll
