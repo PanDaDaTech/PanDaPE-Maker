@@ -624,6 +624,7 @@ Windows\SysWOW64\zh-CN\reg.exe.mui
 Windows\SysWOW64\zh-CN\urlmon.dll.mui
 Windows\SysWOW64\zh-CN\user32.dll.mui
 Windows\SysWOW64\zh-CN\wimgapi.dll.mui
+Windows\SysWOW64\zh-CN\msftedit.dll.mui
 Windows\SysWOW64\actxprxy.dll
 Windows\SysWOW64\advapi32.dll
 Windows\SysWOW64\avifil32.dll
@@ -664,6 +665,7 @@ Windows\SysWOW64\mpr.dll
 Windows\SysWOW64\msacm32.dll
 Windows\SysWOW64\msasn1.dll
 Windows\SysWOW64\msctf.dll
+Windows\SysWOW64\msftedit.dll
 Windows\SysWOW64\msimg32.dll
 Windows\SysWOW64\msls31.dll
 Windows\SysWOW64\msv1_0.dll
@@ -740,7 +742,6 @@ Windows\SysWOW64\ws2_32.dll
 Windows\SysWOW64\wsock32.dll
 Windows\SysWOW64\wtsapi32.dll
 Windows\SysWOW64\xmllite.dll
-Windows\Web\Wallpaper\Windows\img0.jpg
 Windows\WinSxS\amd64_microsoft.windows.c..-controls.resources_*_*.*.*.*_zh-cn_*
 Windows\WinSxS\amd64_microsoft.windows.common-controls_*_*.*.*.*_none_*
 Windows\WinSxS\amd64_microsoft.windows.gdiplus_*_*.*.*.*_none_*
@@ -988,28 +989,9 @@ Windows\System32\wbem\msiprov.dll
 Windows\System32\wbem\msiscsi.mof
 Windows\System32\wbem\ServDeps.dll
 Windows\System32\wbem\WMIsvc.dll
-Windows\System32\wbem\cimwin32.dll
-Windows\System32\wbem\cimwin32.mof
-Windows\System32\wbem\esscli.dll
-Windows\System32\wbem\fastprox.dll
-Windows\System32\wbem\mofd.dll
-Windows\System32\wbem\repdrvfs.dll
-Windows\System32\wbem\wbemcore.dll
-Windows\System32\wbem\wbemess.dll
-Windows\System32\wbem\wbemprox.dll
-Windows\System32\wbem\wbemsvc.dll
-Windows\System32\wbem\WmiPrvSD.dll
-Windows\System32\wbem\WmiPrvSE.exe
-Windows\System32\wbem\wmiutils.dll
-Windows\System32\wbem\zh-CN\cimwin32.dll.mui
-Windows\System32\wbem\zh-CN\mofd.dll.mui
-Windows\System32\wbem\zh-CN\wbemcore.dll.mui
-Windows\System32\wbem\zh-CN\wmiutils.dll.mui
 Windows\System32\wbem\zh-CN\msi.mfl
 Windows\System32\wbem\zh-CN\ServDeps.dll.mui
 Windows\System32\wbem\zh-CN\WMIsvc.dll.mui
-Windows\System32\wbemcomn.dll
-Windows\SysWOW64\wbemcomn.dll
 
 # MSI
 Windows\System32\coml2.dll
@@ -1086,3 +1068,8 @@ Windows\System32\zh-CN\netid.dll.mui
 # 增补“系统属性-远程设置-远程”所需文件：
 Windows\System32\remotepg.dll
 Windows\System32\zh-CN\remotepg.dll.mui
+
+# VBS 支持
+Windows\SysWOW64\vbscript.dll
+Windows\System32\cscript.exe
+Program Files\Common Files\System\ado\msado15.dll
