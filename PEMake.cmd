@@ -30,7 +30,7 @@ set index=0
 echo;
 echo 已有的项目：
 echo ————————————————————————————
-for /d %%i in ("%cd%\projects\*") do (
+for /d %%i in ("%cd%\project\*") do (
 set /a index=index+1
 echo  !index!     %%~nxi
 )
@@ -39,7 +39,7 @@ set /p project=请输入项目序号：
 if /i "%project%"=="" (echo 没有选择项目&cmd /k)
 if %project% gtr %index% (echo 没有选择对应的项目&cmd /k)
 set index=0
-for /d %%x in ("%cd%\projects\*") do (
+for /d %%x in ("%cd%\project\*") do (
 set /a index=index+1
 if !index!==%project% (
 set project=%%~nx
