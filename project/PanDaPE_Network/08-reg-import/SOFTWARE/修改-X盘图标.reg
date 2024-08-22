@@ -1,4 +1,4 @@
 Windows Registry Editor Version 5.00
 
 [HKEY_LOCAL_MACHINE\Tmp_Software\Microsoft\Windows\CurrentVersion\Explorer\DriveIcons\X\DefaultIcon]
-@="X:\\Windows\\PanDaPE\\ICON\\X.ico"
+@="X:\\Windows\\System32\\Disposition\\ICON\\X.ico"
