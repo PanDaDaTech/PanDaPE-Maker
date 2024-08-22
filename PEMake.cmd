@@ -1,6 +1,6 @@
 @echo off
 setlocal enabledelayedexpansion
-set td=20240819_For Github
+set td=%date:~0,4%-%date:~5,2%-%date:~8,2%-%time:~0,2%-%time:~3,2%-%time:~6,2%
 
 cd /d "%~dp0"
 title %~n0-%td%-(%cd%)
@@ -77,15 +77,15 @@ set "S=%cd%\storage
 set "X=%cd%\storage\X"
 set "C=%cd%\storage\config"
 
-if exist "%cd%\projects\%project%\main.cmd" (
+if exist "%cd%\project\%project%\main.cmd" (
 echo;
-echo [94m÷¥–– %cd%\projects\%project%\main.cmd [37m
-pushd "%cd%\projects\%project%"
-call "%cd%\projects\%project%\main.cmd"
+echo [94m÷¥–– %cd%\project\%project%\main.cmd [37m
+pushd "%cd%\project\%project%"
+call "%cd%\project\%project%\main.cmd"
 popd
 )
 
-for /r "%cd%\projects\%project%" /d %%i in (*) do (
+for /r "%cd%\project\%project%" /d %%i in (*) do (
 if exist "%%i\main.cmd" (
 echo;
 echo [94m÷¥–– %%i\main.cmd [37m
