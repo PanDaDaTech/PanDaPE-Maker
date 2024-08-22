@@ -1,6 +1,6 @@
 @echo off
 setlocal enabledelayedexpansion
-set td=20240819_For Github
+set td=%date:~0,4%-%date:~5,2%-%date:~8,2%
 
 cd /d "%~dp0"
 title %~n0-%td%-(%cd%)
