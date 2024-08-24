@@ -40,12 +40,8 @@ Windows\SysWOW64\ieframe.dll
 # ATIH 依赖需要（外置）
 Windows\System32\shacct.dll
 
-# PotPlayer 依赖需要（外置）
-Windows\System32\devenum.dll 
-Windows\System32\quartz.dll
-
-# 微信依赖需要
-Windows\SysWOW64\d3d9.dll
+# 添加新版 Diskgenius 所需 .dll，防止启动慢
+Windows\System32\swprv.dll
 
 # 爱思远控需要
 Windows\System32\SAS.dll

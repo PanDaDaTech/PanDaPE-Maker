@@ -45,7 +45,6 @@ Windows\System32\Boot\zh-CN\winload.exe.mui
 Windows\System32\CatRoot\{F750E6C3-38EE-11D1-85E5-00C04FC295EE}\Microsoft-Windows-Client-Desktop-Required-Package00~*~amd64~~*.*.*.*.cat
 Windows\System32\CatRoot\{F750E6C3-38EE-11D1-85E5-00C04FC295EE}\Microsoft-Windows-Client-Desktop-Required-Package01~*~amd64~~*.*.*.*.cat
 Windows\System32\CatRoot\{F750E6C3-38EE-11D1-85E5-00C04FC295EE}\Microsoft-Windows-Client-Desktop-Required-Package03~*~amd64~~*.*.*.*.cat
-Windows\System32\CatRoot\{F750E6C3-38EE-11D1-85E5-00C04FC295EE}\Microsoft-Windows-Client-Desktop-Required-Package04~*~amd64~~*.*.*.*.cat
 Windows\System32\CodeIntegrity\driver.stl
 Windows\System32\drivers\monitor.sys
 Windows\System32\drivers\WindowsTrustedRT.sys
@@ -613,6 +612,11 @@ Windows\SystemResources\Taskmgr.exe.mun
 Windows\SystemResources\timedate.cpl.mun
 Windows\SystemResources\twinui.dll.mun
 Windows\SystemResources\Windows.UI.Immersive.dll.mun
+Windows\SystemResources\Windows.UI.Cred
+Windows\SystemResources\edputil.dll.mun
+Windows\SystemResources\ieframe.dll.mun
+Windows\SystemResources\mshtml.dll.mun
+Windows\SystemResources\sysdm.cpl.mun
 Windows\SysWOW64\zh-CN\iertutil.dll.mui
 Windows\SysWOW64\zh-CN\ntdll.dll.mui
 Windows\SysWOW64\zh-CN\reg.exe.mui
@@ -776,7 +780,7 @@ Windows\System32\dsreg.dll
 Windows\System32\msvcp110_win.dll
 Windows\System32\windowsudk.shellcommon.dll
 
-# 22621依赖
+# 22621 依赖
 Windows\System32\CodeIntegrity\driversipolicy.p7b
 Windows\System32\dmenrollengine.dll
 Windows\System32\msvcp110_win.dll
@@ -809,7 +813,6 @@ Windows\System32\Windows.Storage.Search.dll
 
 #BitLocker 加解密-控制面板
 Windows\System32\en-US\fveapi.dll.mui
-Windows\System32\zh-CN\advpack.dll.mui
 Windows\System32\zh-CN\BdeHdCfgLib.dll.mui
 Windows\System32\zh-CN\BitLockerWizard.exe.mui
 Windows\System32\zh-CN\BitLockerWizardElev.exe.mui
@@ -817,9 +820,7 @@ Windows\System32\zh-CN\fvecpl.dll.mui
 Windows\System32\zh-CN\fvenotify.exe.mui
 Windows\System32\zh-CN\fvewiz.dll.mui
 Windows\System32\zh-CN\reagent.dll.mui
-Windows\System32\zh-CN\shdocvw.dll.mui
 Windows\System32\zh-CN\vsstrace.dll.mui
-Windows\System32\advpack.dll
 Windows\System32\BdeHdCfgLib.dll
 Windows\System32\BitLockerWizard.exe
 Windows\System32\BitLockerWizardElev.exe
@@ -836,22 +837,12 @@ Windows\System32\vsstrace.dll
 #HWiNFO 依赖
 Windows\System32\tdh.dll
 
-;=============PanDaPE-Add===================
-
-# 原生截图工具
-Windows\System32\msdrm.dll
-Windows\System32\wisp.dll
-Program Files\Common Files\microsoft shared\ink\tpcps.dll
-Program Files\Common Files\microsoft shared\ink\InkObj.dll
-Program Files\Common Files\microsoft shared\ink\ZH-CN\InkObj.dll.mui
-
 # MTP 支持
 Windows\INF\wpdcomp.inf
 Windows\INF\wpdfs.inf
 Windows\INF\wpdmtp.inf
 Windows\INF\wpdmtphw.inf
 Windows\INF\wudfusbcciddriver.inf
-Windows\INF\winusb.inf
 Windows\System32\wpd_ci.dll
 Windows\System32\wpdbusenum.dll
 Windows\System32\wpdshext.dll
@@ -887,19 +878,11 @@ Windows\System32\Drivers\UMDF\zh-CN\wudfusbcciddriver.dll.mui
 Windows\System32\drivers\WpdUpFltr.sys
 Windows\System32\drivers\WUDFPf.sys
 Windows\System32\drivers\WUDFRd.sys
-Windows\System32\drivers\winusb.sys
-Windows\System32\DriverStore\FileRepository\winusb.inf_*
-Windows\System32\DriverStore\FileRepository\winusb.inf_amd64_*
 Windows\System32\DriverStore\FileRepository\wpdcomp.inf*
-Windows\System32\DriverStore\FileRepository\wpdcomp.inf_amd64_*
 Windows\System32\DriverStore\FileRepository\wpdfs.inf*
-Windows\System32\DriverStore\FileRepository\wpdfs.inf_amd64_*
 Windows\System32\DriverStore\FileRepository\wpdmtp.inf*
-Windows\System32\DriverStore\FileRepository\wpdmtp.inf_amd64_*
 Windows\System32\DriverStore\FileRepository\wpdmtphw.inf*
-Windows\System32\DriverStore\FileRepository\wpdmtphw.inf_amd64_*
 Windows\System32\DriverStore\FileRepository\wudfusbcciddriver.inf*
-Windows\System32\DriverStore\FileRepository\wudfusbcciddriver.inf_amd64_*
 Windows\System32\DriverStore\zh-CN\wpdcomp.inf_loc
 Windows\System32\DriverStore\zh-CN\wpdfs.inf_loc
 Windows\System32\DriverStore\zh-CN\wpdmtp.inf_loc
@@ -923,13 +906,6 @@ Windows\System32\DriverStore\zh-CN\netrndis.inf_loc
 Windows\System32\DriverStore\zh-CN\rndiscmp.inf_loc
 Windows\System32\DriverStore\zh-CN\wceisvista.inf_loc
 Windows\System32\CatRoot\{F750E6C3-38EE-11D1-85E5-00C04FC295EE}\Microsoft-Windows-Client-Desktop-Required-Package01~*~*~~10.0.*.*.cat
-
-# SystemResources 补充
-Windows\SystemResources\Windows.UI.Cred 
-Windows\SystemResources\edputil.dll.mun
-Windows\SystemResources\ieframe.dll.mun
-Windows\SystemResources\mshtml.dll.mun
-Windows\SystemResources\sysdm.cpl.mun
 
 # 增补 apphelp.dll 解决类似于 CGI 第一次运行不显示界面字体问题（刷新Explorer或重启软件才能显示）
 Windows\System32\apphelp.dll
@@ -983,7 +959,6 @@ Windows\System32\wbem\zh-CN\ServDeps.dll.mui
 Windows\System32\wbem\zh-CN\WMIsvc.dll.mui
 
 # MSI
-Windows\System32\coml2.dll
 Windows\System32\msi.dll
 Windows\System32\msiexec.exe
 Windows\System32\msihnd.dll
@@ -1028,33 +1003,17 @@ Windows\WinSxS\manifests\x86_policy.8.0.microsoft.vc80.crt*
 Windows\WinSxS\manifests\x86_policy.9.0.microsoft.vc90.crt*
 
 # 补充字体
-Windows\Fonts\malgun.ttf
-Windows\Fonts\msyh.ttc
-Windows\Fonts\segoeui.ttf
-Windows\Fonts\segoeuib.ttf
-Windows\Fonts\simsun.ttc
-Windows\Fonts\svgafix.fon
 Windows\Fonts\symbol.ttf
-Windows\Fonts\times.ttf
-
-# 此电脑右键属性设置文件
-Windows\System32\SystemPropertiesComputerName.exe
-Windows\System32\SystemPropertiesAdvanced.exe
 
 # 系统属性
-Windows\SystemResources\sysdm.cpl.mun
+Windows\System32\SystemPropertiesComputerName.exe
+Windows\System32\SystemPropertiesAdvanced.exe
 Windows\System32\sysdm.cpl
 Windows\System32\zh-CN\sysdm.cpl.mui
-
-# 增补“系统属性-远程设置”所需文件：
 Windows\System32\SystemPropertiesRemote.exe
 Windows\System32\zh-CN\SystemPropertiesRemote.exe.mui
-
-# 增补“系统属性-远程设置-计算机名”所需文件：
 Windows\System32\netid.dll
 Windows\System32\zh-CN\netid.dll.mui
-
-# 增补“系统属性-远程设置-远程”所需文件：
 Windows\System32\remotepg.dll
 Windows\System32\zh-CN\remotepg.dll.mui
 
