@@ -7,23 +7,6 @@ Windows\apppatch\msimain.sdb
 Windows\apppatch\sysmain.sdb
 
 # 参考 Kuer 增加文件
-Windows\System32\wbem\cimwin32.dll
-Windows\System32\wbem\cimwin32.mof
-Windows\System32\wbem\esscli.dll
-Windows\System32\wbem\fastprox.dll
-Windows\System32\wbem\mofd.dll
-Windows\System32\wbem\repdrvfs.dll
-Windows\System32\wbem\wbemcore.dll
-Windows\System32\wbem\wbemess.dll
-Windows\System32\wbem\wbemprox.dll
-Windows\System32\wbem\wbemsvc.dll
-Windows\System32\wbem\WmiPrvSD.dll
-Windows\System32\wbem\WmiPrvSE.exe
-Windows\System32\wbem\wmiutils.dll
-Windows\System32\wbem\zh-CN\cimwin32.dll.mui
-Windows\System32\wbem\zh-CN\mofd.dll.mui
-Windows\System32\wbem\zh-CN\wbemcore.dll.mui
-Windows\System32\wbem\zh-CN\wmiutils.dll.mui
 Windows\System32\ieframe.dll
 Windows\System32\mshtml.dll
 Windows\System32\jscript.dll
