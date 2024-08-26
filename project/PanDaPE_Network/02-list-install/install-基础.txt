@@ -7,19 +7,6 @@ Windows\Boot\Resources\zh-CN\bootres.dll.mui
 Windows\Boot\Resources\bootres.dll
 Windows\Branding\Basebrd\zh-CN\basebrd.dll.mui
 Windows\Branding\Basebrd\basebrd.dll
-Windows\Cursors\aero_arrow.cur
-Windows\Cursors\aero_busy.ani
-Windows\Cursors\aero_ew.cur
-Windows\Cursors\aero_helpsel.cur
-Windows\Cursors\aero_link.cur
-Windows\Cursors\aero_move.cur
-Windows\Cursors\aero_nesw.cur
-Windows\Cursors\aero_ns.cur
-Windows\Cursors\aero_nwse.cur
-Windows\Cursors\aero_pen.cur
-Windows\Cursors\aero_unavail.cur
-Windows\Cursors\aero_up.cur
-Windows\Cursors\aero_working.ani
 Windows\Fonts\marlett.ttf
 Windows\Fonts\micross.ttf
 Windows\Fonts\segmdl2.ttf
@@ -323,7 +310,6 @@ Windows\System32\DXCore.dll
 Windows\System32\dxgi.dll
 Windows\System32\edputil.dll
 Windows\System32\EventAggregation.dll
-Windows\System32\ExplorerFrame.dll
 Windows\System32\feclient.dll
 Windows\System32\filemgmt.dll
 Windows\System32\find.exe
@@ -347,7 +333,6 @@ Windows\System32\IconCodecService.dll
 Windows\System32\iertutil.dll
 Windows\System32\ifsutil.dll
 Windows\System32\imagehlp.dll
-Windows\System32\imageres.dll
 Windows\System32\imm32.dll
 Windows\System32\InfDefaultInstall.exe
 Windows\System32\input.dll
@@ -408,7 +393,6 @@ Windows\System32\newdev.dll
 Windows\System32\ninput.dll
 Windows\System32\NL7Data0804.dll
 Windows\System32\normaliz.dll
-Windows\System32\notepad.exe
 Windows\System32\nrpsrv.dll
 Windows\System32\nsi.dll
 Windows\System32\nsisvc.dll
@@ -462,7 +446,6 @@ Windows\System32\services.msc
 Windows\System32\ServicingCommon.dll
 Windows\System32\setupapi.dll
 Windows\System32\SHCore.dll
-Windows\System32\shell32.dll
 Windows\System32\shfolder.dll
 Windows\System32\shlwapi.dll
 Windows\System32\shsvcs.dll
@@ -676,7 +659,6 @@ Windows\SysWOW64\msvfw32.dll
 Windows\SysWOW64\netapi32.dll
 Windows\SysWOW64\NetSetupApi.dll
 Windows\SysWOW64\netutils.dll
-Windows\SysWOW64\notepad.exe
 Windows\SysWOW64\nsi.dll
 Windows\SysWOW64\ntdll.dll
 Windows\SysWOW64\NtlmShared.dll
@@ -775,6 +757,8 @@ Windows\System32\tree.com
 
 # 原生壳
 Windows\explorer.exe
+Windows\System32\apphelp.dll
+Windows\System32\zh-CN\apphelp.dll.mui
 Windows\System32\dmenrollengine.dll
 Windows\System32\dsreg.dll
 Windows\System32\msvcp110_win.dll
@@ -837,62 +821,6 @@ Windows\System32\vsstrace.dll
 #HWiNFO 依赖
 Windows\System32\tdh.dll
 
-# MTP 支持
-Windows\INF\wpdcomp.inf
-Windows\INF\wpdfs.inf
-Windows\INF\wpdmtp.inf
-Windows\INF\wpdmtphw.inf
-Windows\INF\wudfusbcciddriver.inf
-Windows\System32\wpd_ci.dll
-Windows\System32\wpdbusenum.dll
-Windows\System32\wpdshext.dll
-Windows\System32\WPDShextAutoplay.exe
-Windows\System32\WPDShServiceObj.dll
-Windows\System32\WPDSp.dll
-Windows\System32\WUDFCoinstaller.dll
-Windows\System32\WUDFCompanionHost.exe
-Windows\System32\WUDFHost.exe
-Windows\System32\WUDFPlatform.dll
-Windows\System32\WudfSMCClassExt.dll
-Windows\System32\WUDFx.dll
-Windows\System32\WUDFx02000.dll
-Windows\System32\PortableDeviceApi.dll
-Windows\System32\PortableDeviceClassExtension.dll
-Windows\System32\PortableDeviceConnectApi.dll
-Windows\System32\PortableDeviceStatus.dll
-Windows\System32\PortableDeviceSyncProvider.dll
-Windows\System32\PortableDeviceTypes.dll
-Windows\System32\PortableDeviceWiaCompat.dll
-Windows\System32\zh-CN\PortableDeviceApi.dll.mui
-Windows\System32\zh-CN\portabledevicestatus.dll.mui
-Windows\System32\zh-CN\PortableDeviceSyncProvider.dll.mui
-Windows\System32\zh-CN\wpd_ci.dll.mui
-Windows\System32\zh-CN\WpdBusEnum.dll.mui
-Windows\System32\zh-CN\WPDShextAutoplay.exe.mui
-Windows\System32\zh-CN\WUDFHost.exe.mui
-Windows\System32\zh-CN\wudfplatform.dll.mui
-Windows\System32\zh-CN\WudfSMCClassExt.dll.mui
-Windows\System32\vaultcli.dll
-Windows\System32\efswrt.dll
-Windows\System32\Drivers\UMDF\zh-CN\wudfusbcciddriver.dll.mui
-Windows\System32\drivers\WpdUpFltr.sys
-Windows\System32\drivers\WUDFPf.sys
-Windows\System32\drivers\WUDFRd.sys
-Windows\System32\DriverStore\FileRepository\wpdcomp.inf*
-Windows\System32\DriverStore\FileRepository\wpdfs.inf*
-Windows\System32\DriverStore\FileRepository\wpdmtp.inf*
-Windows\System32\DriverStore\FileRepository\wpdmtphw.inf*
-Windows\System32\DriverStore\FileRepository\wudfusbcciddriver.inf*
-Windows\System32\DriverStore\zh-CN\wpdcomp.inf_loc
-Windows\System32\DriverStore\zh-CN\wpdfs.inf_loc
-Windows\System32\DriverStore\zh-CN\wpdmtp.inf_loc
-Windows\System32\DriverStore\zh-CN\wpdmtphw.inf_loc
-Windows\System32\DriverStore\zh-CN\WUDFUsbccidDriver.inf_loc
-windows\System32\catroot\{F750E6C3-38EE-11D1-85E5-00C04FC295EE}\Microsoft-Windows-WPD-UltimatePortableDeviceFeature-Feature-Package~*.cat
-windows\System32\catroot\{F750E6C3-38EE-11D1-85E5-00C04FC295EE}\Microsoft-Windows-Portable-Devices-merged-Package~*.cat
-windows\Systemresources\wpdshext.dll.mun
-Windows\SysWOW64\efswrt.dll
-
 # RNDIS
 Windows\INF\netrndis.inf
 Windows\INF\rndiscmp.inf
@@ -906,10 +834,6 @@ Windows\System32\DriverStore\zh-CN\netrndis.inf_loc
 Windows\System32\DriverStore\zh-CN\rndiscmp.inf_loc
 Windows\System32\DriverStore\zh-CN\wceisvista.inf_loc
 Windows\System32\CatRoot\{F750E6C3-38EE-11D1-85E5-00C04FC295EE}\Microsoft-Windows-Client-Desktop-Required-Package01~*~*~~10.0.*.*.cat
-
-# 增补 apphelp.dll 解决类似于 CGI 第一次运行不显示界面字体问题（刷新Explorer或重启软件才能显示）
-Windows\System32\apphelp.dll
-Windows\System32\zh-CN\apphelp.dll.mui 
 
 # 屏幕键盘
 Program Files\Common Files\microsoft shared\ink\fsdefinitions\auxpad\auxbase.xml
@@ -968,7 +892,6 @@ Windows\System32\zh-CN\msiexec.exe.mui
 Windows\System32\zh-CN\msimsg.dll.mui
 
 # ISCSI 服务
-windows\inf\iscsi.inf
 windows\System32\iscsicli.exe
 windows\System32\iscsicpl.dll
 windows\System32\iscsicpl.exe
@@ -1021,3 +944,102 @@ Windows\System32\zh-CN\remotepg.dll.mui
 Windows\SysWOW64\vbscript.dll
 Windows\System32\cscript.exe
 Program Files\Common Files\System\ado\msado15.dll
+
+# MTP
+Windows\INF\wpdcomp.inf
+Windows\INF\wpdfs.inf
+Windows\INF\wpdmtp.inf
+Windows\INF\wpdmtphw.inf
+Windows\INF\wudfusbcciddriver.inf
+Windows\System32\efswrt.dll
+Windows\System32\PortableDeviceApi.dll
+Windows\System32\PortableDeviceClassExtension.dll
+Windows\System32\PortableDeviceConnectApi.dll
+Windows\System32\PortableDeviceStatus.dll
+Windows\System32\PortableDeviceSyncProvider.dll
+Windows\System32\PortableDeviceTypes.dll
+Windows\System32\PortableDeviceWiaCompat.dll
+Windows\System32\vaultcli.dll
+Windows\System32\winusb.dll
+Windows\System32\wpd_ci.dll
+Windows\System32\wpdbusenum.dll
+Windows\System32\WPDShextAutoplay.exe
+Windows\System32\WPDShServiceObj.dll
+Windows\System32\WPDSp.dll
+Windows\System32\WUDFCoinstaller.dll
+Windows\System32\WUDFCompanionHost.exe
+Windows\System32\WUDFHost.exe
+Windows\System32\WUDFPlatform.dll
+Windows\System32\WudfSMCClassExt.dll
+Windows\System32\WUDFx.dll
+Windows\System32\WUDFx02000.dll
+Windows\System32\CatRoot\{F750E6C3-38EE-11D1-85E5-00C04FC295EE}\Microsoft-Windows-Portable-Devices-merged-Package~*~amd64~~*.*.*.*.cat
+Windows\System32\CatRoot\{F750E6C3-38EE-11D1-85E5-00C04FC295EE}\Microsoft-Windows-Portable-Devices-merged-Package~*~amd64~zh-CN~*.*.*.*.cat
+Windows\System32\CatRoot\{F750E6C3-38EE-11D1-85E5-00C04FC295EE}\Microsoft-Windows-WPD-UltimatePortableDeviceFeature-Feature-Package~*~amd64~~*.*.*.*.cat
+Windows\System32\CatRoot\{F750E6C3-38EE-11D1-85E5-00C04FC295EE}\Microsoft-Windows-WPD-UltimatePortableDeviceFeature-Feature-Package~*~amd64~zh-CN~*.*.*.*.cat
+Windows\System32\drivers\WpdUpFltr.sys
+Windows\System32\drivers\WUDFPf.sys
+Windows\System32\drivers\WUDFRd.sys
+Windows\System32\drivers\UMDF\EhStorPwdDrv.dll
+Windows\System32\drivers\UMDF\HidTelephony.dll
+Windows\System32\drivers\UMDF\IddCx.dll
+Windows\System32\drivers\UMDF\Microsoft.Bluetooth.Profiles.HidOverGatt.dll
+Windows\System32\drivers\UMDF\NfcCx.dll
+Windows\System32\drivers\UMDF\PosCx.dll
+Windows\System32\drivers\UMDF\RdpIdd.dll
+Windows\System32\drivers\UMDF\SDFLauncher.dll
+Windows\System32\drivers\UMDF\SensorsCx.dll
+Windows\System32\drivers\UMDF\SMCCx.dll
+Windows\System32\drivers\UMDF\UcmCx.dll
+Windows\System32\drivers\UMDF\usbdr.dll
+Windows\System32\drivers\UMDF\UsbXhciCompanion.dll
+Windows\System32\drivers\UMDF\zh-CN\hidscanner.dll.mui
+Windows\System32\drivers\UMDF\zh-CN\idtsec.dll.mui
+Windows\System32\drivers\UMDF\zh-CN\mgtdyn.dll.mui
+Windows\System32\drivers\UMDF\zh-CN\Microsoft.Bluetooth.Profiles.HidOverGatt.dll.mui
+Windows\System32\drivers\UMDF\zh-CN\SensorsCx.dll.mui
+Windows\System32\drivers\UMDF\zh-CN\SensorsHid.dll.mui
+Windows\System32\drivers\UMDF\zh-CN\UsbccidDriver.dll.mui
+Windows\System32\drivers\UMDF\zh-CN\wpdmtpdr.dll.mui
+Windows\System32\drivers\UMDF\zh-CN\WUDFUsbccidDriver.dll.mui
+Windows\System32\DriverStore\FileRepository\wpdcomp.inf*
+Windows\System32\DriverStore\FileRepository\wpdfs.inf*
+Windows\System32\DriverStore\FileRepository\wpdmtp.inf*
+Windows\System32\DriverStore\FileRepository\wpdmtphw.inf*
+Windows\System32\DriverStore\FileRepository\wudfusbcciddriver.inf*
+Windows\System32\DriverStore\zh-CN\wpdcomp.inf_loc
+Windows\System32\DriverStore\zh-CN\wpdfs.inf_loc
+Windows\System32\DriverStore\zh-CN\wpdmtp.inf_loc
+Windows\System32\DriverStore\zh-CN\wpdmtphw.inf_loc
+Windows\System32\DriverStore\zh-CN\WUDFUsbccidDriver.inf_loc
+Windows\System32\zh-CN\PortableDeviceApi.dll.mui
+Windows\System32\zh-CN\portabledevicestatus.dll.mui
+Windows\System32\zh-CN\PortableDeviceSyncProvider.dll.mui
+Windows\System32\zh-CN\VaultCli.dll.mui
+Windows\System32\zh-CN\wpd_ci.dll.mui
+Windows\System32\zh-CN\WpdBusEnum.dll.mui
+Windows\System32\zh-CN\WPDShextAutoplay.exe.mui
+Windows\System32\zh-CN\WUDFHost.exe.mui
+Windows\System32\zh-CN\wudfplatform.dll.mui
+Windows\System32\zh-CN\WudfSMCClassExt.dll.mui
+Windows\SystemResources\PortableDeviceStatus.dll.mun
+
+# apppatch
+Windows\apppatch\drvmain.sdb
+Windows\apppatch\MergeSdbFilesSource\sysMerge.sdb
+Windows\apppatch\msimain.sdb
+Windows\apppatch\sysmain.sdb
+
+# 参考 Kuer 补充组件
+Windows\System32\ieframe.dll
+Windows\System32\mshtml.dll
+Windows\System32\jscript.dll
+Windows\System32\jscript9.dll
+Windows\System32\jscript9diag.dll
+Windows\System32\zh-CN\ieframe.dll.mui
+Windows\System32\zh-CN\jscript.dll.mui
+Windows\System32\zh-CN\jscript9.dll.mui
+Windows\System32\zh-CN\mshtml.dll.mui
+
+# 爱思远控需要
+Windows\SysWOW64\taskschd.dll
